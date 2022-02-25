@@ -1,7 +1,8 @@
 board = {}
 
 def create_board() :
-    for i in range(9) :
+    i = 1
+    for i in range(10) :
         board.update({i: False})
     print(board)
 
