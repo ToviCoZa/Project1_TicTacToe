@@ -8,8 +8,10 @@ def checkWinCondition() :
     for i in solutions :
         aligned_marks = 0
         for j in i :
-            if GridGenerator.board.get(j) :
+            if GridGenerator.board.get(j) == True :
+                print(GridGenerator.board.get(j))
                 aligned_marks += 1
+                print(aligned_marks)
                 if aligned_marks == 3 :
                     return 'win'
                 
