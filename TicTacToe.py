@@ -28,11 +28,11 @@ def takeTurns():
   while True:
     draw_board()
     selected_cell = input("Please input the number of the cell you want to play in : ")
-    if selected_cell.isdigit and len(selected_cell) == 1 and board[int(selected_cell)] == -1: #Si on est sur une case libre, on avance d'un tours
-      board[int(selected_cell)] = countOfTurns;
+    if selected_cell.isdigit and len(selected_cell) == 1 and board[int(selected_cell)] == -1: 
+      board[int(selected_cell)] = countOfTurns
       countOfTurns += 1
-      if checkWinCondition() : break #Si quelqu'un à gagné
-      if fullBoard() : #Si la grille est pleine
+      if checkWinCondition() : break 
+      if fullBoard() : 
         print("It's a draw !")
         break
   draw_board()
@@ -47,11 +47,11 @@ def fullBoard():
 def checkWinCondition():
   solutions = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
   for i in solutions :
-    if board[i[0]] != -1 and board[i[1]] != -1 and board[i[2]] != -1: #Si on test 3 cases remplies 
-      if board[i[0]] % 2 == board[i[1]] % 2 == board[i[2]] % 2: #Si les 3 cases ont été placées par le meme joueur
-        if i[0] % 2 == 0: #win du joueur 1
+    if board[i[0]] != -1 and board[i[1]] != -1 and board[i[2]] != -1: #Testing 3 full cells 
+      if board[i[0]] % 2 == board[i[1]] % 2 == board[i[2]] % 2: #Checking if unique player fulfilled the cells
+        if i[0] % 2 == 0: 
           print(player_1.get('Name') + " has won !")
-        else: #win du joueur 2
+        else: 
           print(player_2.get('Name') + " has won !")
         return True
   return False
