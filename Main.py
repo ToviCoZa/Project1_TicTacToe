@@ -1,4 +1,8 @@
 import GridGenerator
-import GameLoop
+import Initialize
+import GameManager
+
 GridGenerator.create_board()
+Initialize.initialization()
+GameManager.gameLoop()
 
