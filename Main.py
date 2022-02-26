@@ -1,9 +1,14 @@
+from typing_extensions import Self
 import GridGenerator
-import Initialize
+import Player
 import GameManager
 
 
+
 GridGenerator.create_board()
-Initialize.initialization()
-GameManager.GameManager.takeTurns()
+
+GameManager.GameManager.get_instance()
+first_player = GameManager.GameManager.initialization()
+GameManager.GameManager.takeTurns(first_player)
+
 

@@ -10,9 +10,13 @@ Organization
 Links
 Project Description
 Write a short description of your project. Write 1-2 sentences about the game you chose to build and why.
+    We were assigne the TocTacToe game 
 
 Rules
-Briefly describe the rules of the game.
+At the start of the, the first player to play is decided by flipping a virtual coin
+Then, taking turns, each player inputs a number corresponding to the cell they want to play in.
+When 3 alignes cells are filled with one's symbol, this player wins
+
 
 Workflow
 Outline the workflow you used in your project. What are the steps you went through?

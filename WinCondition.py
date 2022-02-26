@@ -1,18 +1,17 @@
-import imp
 import GridGenerator
 
 solutions = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]]
 
 
-def checkWinCondition() :
+def checkWinCondition(player) :
+    player = player.get_instance()
     for i in solutions :
-        aligned_marks = 0
         for j in i :
-            if GridGenerator.board.get(j) == True :
+            if GridGenerator.board.get(j) == player.__name__ :
                 print(GridGenerator.board.get(j))
-                aligned_marks += 1
-                print(aligned_marks)
-                if aligned_marks == 3 :
+                player.aligned_marks += 1
+                print(player.aligned_marks)
+                if player.aligned_marks == 3 :
                     return 'win'
                 
     
