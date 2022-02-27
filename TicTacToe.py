@@ -4,7 +4,6 @@ import os
 
 player_1 = ({'Name' : input("Player 1 please enter your name : ")})
 player_2 = ({'Name' : input("Player 2 please enter your name : ")})
-
 os.system('cls')
 
 
