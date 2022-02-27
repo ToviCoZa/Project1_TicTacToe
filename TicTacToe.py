@@ -1,4 +1,5 @@
 import random
+from unicodedata import name
 
 player_1 = ({'Name' : input("Player 1 please enter your name : ")})
 player_2 = ({'Name' : input("Player 2 please enter your name : ")})
@@ -8,8 +9,10 @@ board = [-1] * 9
 def whoIsGoingToStart():
   if random.randint(0,100) <= 50 : 
       starting_player = player_1
+      print(player_1.get('Name') + " plays first")
   else : 
       starting_player = player_2
+      print(player_2.get('Name') + " plays first")
   return(starting_player)
 
 def draw_board() :
